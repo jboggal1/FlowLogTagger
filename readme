@@ -1,0 +1,20 @@
+Assumptions:
+Log Format: The program only supports the default log format (VPC Flow Logs format), not custom formats. Specifically, it supports version 2, where fields are structured in a fixed format.
+
+Protocol Mapping: Only standard protocols are supported, including TCP (protocol number 6), UDP (protocol number 17), and ICMP (all others default to icmp).
+
+Dependencies: The program does not use any non-default libraries or packages (e.g., Hadoop, Spark, Pandas) and can be run on a local machine with just a JDK installed.
+
+Requirements:
+Java Development Kit (JDK): Java 8 or higher
+
+Compile the Program:
+Navigate to the program’s directory in the terminal and compile the program with:
+javac FlowLogTagger.java
+
+Run the Program:
+Execute the program with:
+java FlowLogTagger
+
+Testing with Sample Data:
+A sample lookup.csv with various (dstport, protocol, tag) combinations was created, as well as a flow_logs.txt file with flow log entries in the default format. The program successfully categorized and counted entries based on this sample data.
